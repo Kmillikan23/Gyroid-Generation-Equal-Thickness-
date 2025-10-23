@@ -16,13 +16,13 @@ res            = 0.2
 
 
 # read input spreadsheet
-file_location = r"C:\Users\kmillikan\OneDrive - Oceanit-GCC High\Project Work\Gyroid Generation"  
-input_filename = "CurrentGenAll.xlsx"          
 
+input_filename = "CurrentGenAll.xlsx"          
 output_dir = "output_STLs"
+
 os.makedirs(output_dir, exist_ok=True)
 
-df = pd.read_excel(os.path.join(file_location, input_filename))
+df = pd.read_excel(input_filename)
 
 results = []
 
@@ -76,3 +76,4 @@ out_df = df.merge(pd.DataFrame(results), on='ID')
 out_df.to_excel("output_with_thickness.xlsx", index=False)
 
 print("Done: generated STLs and wrote output_with_thickness.xlsx")
+
