@@ -7,8 +7,8 @@ import pyvista as pv
 from scipy.optimize import root_scalar
 
 
-length = (10.01, 10.01, 10.01)   # mm
-res    = 0.2          # mm
+length = (10 10 10)   # mm
+res    = 0.23          # mm
 
 wavex, wavey, wavez = 10,10,10     # mm
 thetax, thetay, thetaz = 0.0, 0.0, 0.0    # degrees
@@ -59,3 +59,4 @@ plotter.add_mesh(mesh_opt, color='lightblue', show_edges=True)
 plotter.show()
 
 print(f"Done. thickness = {thickness_opt:.4f} mm  |  STL: {stlsave}")
+
